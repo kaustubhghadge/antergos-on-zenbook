@@ -11,41 +11,114 @@
      <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
+     <!-- Custom CSS -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
  </head>
 
  <body>
 <div>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <p class="navbar-text">
-        Home
-      </p>
-      <p class="navbar-text">
-        Technical Info
-      </p>
-    </div>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+   <div class="container">
+    <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Antergos-on-Zenbook</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+                  <ul class="nav navbar-nav">
+                      <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                      <li class="hidden">
+                          <a class="page-scroll" href="#page-top"></a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#about">About</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#technical">Technical</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#contact">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container -->
   </nav>
-      <div class="panel panel-default" style="padding-top:70px">
-        <div class="panel-body" style="text-align:justify">
-          <p>
-            I bought Asus Zenbook UX310UA after carefully considering my needs for setting up a web development environment. I'm planning to learn more about OpenStack, for which I needed a powerful system to spin off instances. MacBooks were pricey for the configuration which I needed. I even considered Dell XPS Developer Edition and System76. Although they are great laptops, Asus offered me a better system for less price.
-          </p> <br>
-        </div>
-        <div class="panel-body" style="text-align:justify">
-          <p>
-            I've been a long time Ubuntu user. Recently switched to Arch universe, thanks to my good friend <a href= "https://github.com/Prajaktcs">Prajakt Shastry.</a> Who has been a pure Arch user for a long time.
-            I looked at various Arch based distros and Antergos seemed quite interesting. It's sleek and easy to install. Most of the things worked right out of the box. I had issues with trackpad but kernel update 4.8.7 has pretty much neutralized it. There are still some issues with palm detection while typing, but they don't affect me intensely. Hotkeys also work right out the box, except for brightness. AUR has been a boon to Arch novice like me. I've found it easy to install packages, precisely because documentation is excellent. I'll work on installing pure Arch and setting up my system from sratch in the near future.
-          </p> <br>
-        </div>
-        <div class="panel-body" style="text-align:justify">
-          <p>
-            I use Antergos as my primary OS on Asus Zenbook UX310UA. I use it mainly for web development - NodeJS, AngularJS, Redis etc. I also use it to control AWS instances using configured AWS CLI and Vagrant. I ran into some issues while setting up VirtualBox, but they were sorted out once I made sure I had all the required dependencies installed.
 
-            I do have some issues in configuring my Canon printer. But I'll work on it.
-          </p>
+  <!--About section -->
+  <section id="about" class="about-section">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12" style="text-align:justify">
+              <p>
+                I bought Asus Zenbook UX310UA after carefully considering my needs for setting up a web development environment. I'm planning to learn more about OpenStack, for which I needed a powerful system to spin off instances. MacBooks were pricey for the configuration which I needed. I even considered Dell XPS Developer Edition and System76. Although they are great laptops, Asus offered me a better system for less price.
+              </p> <br>
+              <p>
+                I've been a long time Ubuntu user. Recently switched to Arch universe, thanks to my good friend <a href= "https://github.com/Prajaktcs">Prajakt Shastry.</a> Who has been a pure Arch user for a long time.
+                I looked at various Arch based distros and Antergos seemed quite interesting. It's sleek and easy to install. Most of the things worked right out of the box. I had issues with trackpad but kernel update 4.8.7 has pretty much neutralized it. There are still some issues with palm detection while typing, but they don't affect me intensely. Hotkeys also work right out the box, except for brightness. AUR has been a boon to Arch novice like me. I've found it easy to install packages, precisely because documentation is excellent. I'll work on installing pure Arch and setting up my system from sratch in the near future.
+              </p> <br>
+              <p>
+                I use Antergos as my primary OS on Asus Zenbook UX310UA. I use it mainly for web development - NodeJS, AngularJS, Redis etc. I also use it to control AWS instances using configured AWS CLI and Vagrant. I ran into some issues while setting up VirtualBox, but they were sorted out once I made sure I had all the required dependencies installed.
+
+                I do have some issues in configuring my Canon printer. But I'll work on it.
+              </p>
+            </div>
+          </div>
+        </div>
+  </section>
+<!--Technical section-->
+<section id="technical" class="technical-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Technical Stuff</h1>
+        <p>
+          Following is the output of lshw command -
+        </p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="pages/lshw.html">
+          </iframe>
         </div>
       </div>
+    </div>
   </div>
+</section>
+
+<!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact</h1>
+                </div>
+                <div class="well well-lg" style="text-align:justify">
+
+                  <h2>Kaustubh Ghadge</h2><br>
+                  <h3>Email - kaustubhghadge@outlook.com</h3>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+  </div>
+
+  <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
  </body>
 
  </html>
